@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [item,setItem]=useState("")
+  return(
+      <div>
+        <input type="text" id="add-todo-txt" value="" onChange={(evt)=>setItem(evt.target.value)}/>
+        <button id={"add-todo-btn"}>Add</button>
+        <div id="add-todo-list">
+
+
+        </div>
+      </div>
+  )
 }
 
 export default App;

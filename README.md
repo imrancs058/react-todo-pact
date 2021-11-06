@@ -10,8 +10,11 @@ To build docker image:
 
 Run the docker with command\
 ### ` docker-compose start`
-To run app
+Now you can run app by http://localhost:3001
+If you want to run without docker then
 ### ` npm start`
+Now you can run app by http://localhost:3000 
+
  To run tests
 ### ` npm run test`
 To run and for creation of pact by Contract Test

@@ -1,10 +1,10 @@
-import HeroService from './hero.service';
+import TodoService from './api/todo.service';
 import * as Pact from '@pact-foundation/pact';
-import Hero from './hero';
+import TodoDto from './api/todoDto';
 
 describe('TodoService API', () => {
 
-    const heroService = new HeroService('http://localhost', global.port);
+    const todoService = new TodoService('http://localhost', global.port);
 
     describe('createHero()', () => {
 
@@ -25,7 +25,7 @@ describe('TodoService API', () => {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json; charset=utf-8'
                     },
-                    body: new Hero("new todo")
+                    body: new TodoDto("new todo")
                 },
                 willRespondWith: {
                     status: 201,
@@ -33,13 +33,13 @@ describe('TodoService API', () => {
                         'Content-Type': 'application/json; charset=utf-8'
                     },
                     body: Pact.Matchers.somethingLike(
-                        new Hero("new todo"))
+                        new TodoDto("new todo"))
                 }
             }).then(() => done());
         });
 
         it('sends a request according to contract', (done) => {
-            heroService.createHero(new Hero("new todo"))
+            todoService.createTodo(new TodoDto("new todo"))
                 .then(response => {
                     const hero = response.data;
                     expect(hero.name).toEqual("new todo");

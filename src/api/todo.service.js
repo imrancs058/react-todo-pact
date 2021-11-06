@@ -9,16 +9,16 @@ class TodoService {
         this.port = port;
     }
 
-     createTodo(hero) {
+     createTodo(todoBody) {
         return axios.request({
             method: 'POST',
             url: `/todo`,
-            baseURL: `http://localhost:3322`,
+            baseURL: `http://localhost:4000`,
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json; charset=utf-8'
             },
-            data: hero
+            data: todoBody
         }, adapter);
     };
 
@@ -26,7 +26,7 @@ class TodoService {
         return axios.request({
             method: 'get',
             url: `/todo`,
-            baseURL: `http://localhost:3322`,
+            baseURL: `http://localhost:4000`,
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json; charset=utf-8'

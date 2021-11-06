@@ -1,0 +1,72 @@
+I, [2021-11-06T13:44:06.286829 #5072]  INFO -- : Registered expected interaction POST /todo
+D, [2021-11-06T13:44:06.287002 #5072] DEBUG -- : {
+  "description": "a POST request to create a todo",
+  "providerState": "provider allows todo creation",
+  "request": {
+    "method": "POST",
+    "path": "/todo",
+    "headers": {
+      "Accept": "application/json",
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "name": "new todo"
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": {
+      "json_class": "Pact::SomethingLike",
+      "contents": {
+        "name": "new todo"
+      }
+    }
+  },
+  "metadata": null
+}
+I, [2021-11-06T13:44:06.318983 #5072]  INFO -- : Received request POST /todo
+D, [2021-11-06T13:44:06.319979 #5072] DEBUG -- : {
+  "path": "/todo",
+  "query": "",
+  "method": "post",
+  "body": {
+    "name": "new todo"
+  },
+  "headers": {
+    "Content-Length": "19",
+    "Content-Type": "application/json; charset=utf-8",
+    "Accept": "application/json",
+    "Referer": "http://localhost/",
+    "User-Agent": "Mozilla/5.0 (win32) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/16.7.0",
+    "Accept-Language": "en",
+    "Origin": "http://localhost",
+    "Accept-Encoding": "gzip, deflate",
+    "Host": "localhost:4000",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-11-06T13:44:06.319979 #5072]  INFO -- : Found matching response for POST /todo
+D, [2021-11-06T13:44:06.319979 #5072] DEBUG -- : {
+  "status": 201,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": {
+    "json_class": "Pact::SomethingLike",
+    "contents": {
+      "name": "new todo"
+    }
+  }
+}
+I, [2021-11-06T13:44:06.349116 #5072]  INFO -- : Verifying - interactions matched
+I, [2021-11-06T13:44:06.365085 #5072]  INFO -- : Cleared interactions
+I, [2021-11-06T13:44:06.380396 #5072]  INFO -- : Updating pact for todo-provider at D:/Projects/TDD/react-todo-pact/pacts/todo-consumer-todo-provider.json
+I, [2021-11-06T13:44:06.383339 #5072]  INFO -- : *****************************************************************************
+I, [2021-11-06T13:44:06.383339 #5072]  INFO -- : Updating existing file .D:/Projects/TDD/react-todo-pact/pacts/todo-consumer-todo-provider.json as pactfile_write_mode is :update
+I, [2021-11-06T13:44:06.384340 #5072]  INFO -- : Only interactions defined in this test run will be updated.
+I, [2021-11-06T13:44:06.384340 #5072]  INFO -- : As interactions are identified by description and provider state, pleased note that if either of these have changed, the old interactions won't be removed from the pact file until the specs are next run with :pactfile_write_mode => :overwrite.
+I, [2021-11-06T13:44:06.384340 #5072]  INFO -- : *****************************************************************************

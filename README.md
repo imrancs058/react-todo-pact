@@ -1,7 +1,19 @@
 # Getting Started with Create React TODOApp
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+ToDo List App is a kind of app that generally used to maintain our day-to-day tasks or list everything that we have to do, with the most important tasks at the top of the list, and the least important tasks at the bottom. It is helpful in planning our daily schedules.
+So this is frontend app  that provide user interactions
 
+
+## Technology
+Nodejs 16 version with react version 17
+## Architecture
+CRA templating
+
+## CDC Tests
+Consumer-Driven Contract tests (CDC tests) are a specialization of mock tests
+They work just like mock tests with the specialty that the interface contract is driven by the consumer and not, as one would expect naturally, by the provider.
 ## Available Scripts
 
 To build docker image:
